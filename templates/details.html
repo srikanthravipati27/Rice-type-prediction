@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About the Model</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    /* Base Reset and Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ff90;
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 20px 60px;
+  background-color: #f0f0f0;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image styling */
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Text content styling */
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-content p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Features list */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.feature-item::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  margin-right: 10px;
+}
+
+.feature-item strong {
+  margin-left: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    margin: auto;
+  }
+
+  .about-content {
+    text-align: left;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">RICE TYPE DETECTION</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/details">About</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="/static/rice-field.jpg" alt="Rice Field">
+      </div>
+      <div class="about-content">
+        <h2>About the Rice Type Classification Model</h2>
+        <p>This model is built using Convolutional Neural Networks and trained on labelled images of rice. It uses Transfer Learning with MobileNetV2.</p>
+        <div class="features">
+          <div class="feature-item">✔️ <strong>Accuracy:</strong> Predicts with over 97% accuracy.</div>
+          <div class="feature-item">🌾 <strong>Types:</strong> Detects Arborio, Basmati, Ipsala, Jasmine, Karacadag.</div>
+          <div class="feature-item">📂 <strong>Dataset:</strong> Sourced from Kaggle.</div>
+          <div class="feature-item">🧠 <strong>Architecture:</strong> MobileNetV2-based deep learning.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
